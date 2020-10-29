@@ -62,15 +62,22 @@ this.vbusInfos$$
     });
 ```
 
-To get all available fields, take a look at ```logger.ts``` and change the log level to 'silly':
+To get all available fields for your device, take a look at ```logger.ts``` and change the log level to 'silly':
 ```
 export const myLogger = winston.createLogger({
     level: 'silly', // <== change log level here
     format: combine(splat(), simple(), timestamp(), prettyJson),
     transports: [new winston.transports.Console({})],
 });
-
 ```
+After starting the application you should now see a bunch of JSON and hopefully 
+find the right information.
+
+To inspect the information I recommend writing it to a file and opening this file with your favorite editor:
+```
+npx ts-node src/index.ts > output.txt
+```
+ 
 
 ## Start
 Setup (only once)
