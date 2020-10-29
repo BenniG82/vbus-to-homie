@@ -1,0 +1,30 @@
+{
+  "name": "mqtt-sensors",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tasmota": "npx ts-node src/index.ts"
+  },
+  "author": "Benjamin Gniza",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mocha": "^2.2.43",
+    "@types/node": "^8.10.64",
+    "@types/winston": "^2.2.0",
+    "angular-tslint-rules": "^1.20.4",
+    "nodemon": "^1.19.4",
+    "tslint": "^5.20.1",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.161",
+    "lodash": "^4.17.20",
+    "mqtt": "^4.2.1",
+    "resol-vbus": "^0.21.0",
+    "rxjs": "^6.6.3",
+    "winston": "^3.3.3"
+  }
+}
