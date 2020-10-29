@@ -88,7 +88,7 @@ npx ts-node src/index.ts
 ```
 
 ## MQTT Homie structure
-![MQTT Structure](https://github.com/BenniG82/vbus-to-homie/doc/homie-mqtt.png)
+![MQTT Structure](https://github.com/BenniG82/vbus-to-homie/raw/master/doc/homie-mqtt.png
 
 ## Openhab example
 Please note that you need setup MQTT in openhab first. After you set MQTT up go to the openhab "Inbox" first and 
@@ -98,4 +98,4 @@ Unfortunately the Homie-Plugin for openhab has an annoying bug, and will most li
 "did not receive mandatory topic XXX" after you open the newly created thing.
 
 To overcome this, just restart this application. And wait for the thing to get "green" :)
-![Openhab](https://github.com/BenniG82/vbus-to-homie/doc/openhab-homie.png)
+![Openhab](https://github.com/BenniG82/vbus-to-homie/raw/master/doc/openhab-homie.png)
