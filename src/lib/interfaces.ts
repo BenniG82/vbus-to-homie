@@ -16,7 +16,7 @@ export interface MqttServerConfig {
 }
 
 export interface HomieMqttServerConfig extends MqttServerConfig {
-    homeBaseTopic: string;
+    homieBaseTopic: string;
 }
 
 export interface SourceMqttServerConfig extends MqttServerConfig {

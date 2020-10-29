@@ -9,6 +9,13 @@ const pumpSpeedRelay1 = 'Pump speed relay 1';
 const temperatureSensor1 = 'Temperature sensor 1';
 const temperatureSensor2 = 'Temperature sensor 2';
 const temperatureSensor3 = 'Temperature sensor 3';
+// most of the time we only need a few paketFields, so whitelist the desired ones
+const whitelist = [
+    pumpSpeedRelay1,
+    temperatureSensor1,
+    temperatureSensor2,
+    temperatureSensor3
+];
 
 export class VbusReader {
     readonly connection: SerialConnection;
@@ -46,15 +53,8 @@ export class VbusReader {
     }
 
     private onPacket(packet: Packet): void {
-        myLogger.silly(`Packet received: ${packet.getId()}`);
+        myLogger.silly(`Packet received: ${packet.getId()}`, packet);
 
-        // most of the time we only need a few paketFields, so whitelist the desired ones
-        const whitelist = [
-            pumpSpeedRelay1,
-            temperatureSensor1,
-            temperatureSensor2,
-            temperatureSensor3
-        ];
         const packetFields = this.specification.getPacketFieldsForHeaders([packet]);
         const vbusInfos = packetFields
             .filter(p => whitelist.includes(p.name))

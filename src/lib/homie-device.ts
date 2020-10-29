@@ -33,7 +33,7 @@ export class HomieDevice implements HomieDeviceProperties {
             signal: 0,
             uptime: 0
         };
-        const deviceTopic = `${mqttConfig.homeBaseTopic}/${deviceId}`;
+        const deviceTopic = `${mqttConfig.homieBaseTopic}/${deviceId}`;
         const client = mqtt.connect(mqttConfig.brokerUrl, {
             clientId: `General Purpose Mqtt To Homie writer for ${deviceId}`,
             keepalive: 60,

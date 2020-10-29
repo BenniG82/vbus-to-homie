@@ -5,7 +5,7 @@ export const mqttConfig: HomieMqttServerConfig = {
     brokerUrl: 'mqtt://192.168.0.45',
     username: 'mqtt',
     password: 'password',
-    homeBaseTopic: 'homie'
+    homieBaseTopic: 'homie'
 };
 
 const path = '/dev/virtualcom0';
