@@ -56,8 +56,8 @@ this.vbusInfos$$
         throttleTime(10000)
     )
     .subscribe(infos => {
-        // use the vbus-value with name "Temperature sensor 1" for the property "temperatur" of the
-        // kollektorNode 
+        // use the vbus-value with name "Temperature sensor 1" for the 
+        // property "temperatur" of the kollektorNode 
         this.updateIfPresent(infos, temperatureSensor1, kollektorNode, 'temperatur');
     });
 ```
