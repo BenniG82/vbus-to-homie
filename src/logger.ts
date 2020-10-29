@@ -1,10 +1,10 @@
 import * as winston from 'winston';
-import util from 'util';
+import * as util from 'util';
 
 const {combine, timestamp, printf, simple, splat} = winston.format;
 
 const prettyJson = printf(info => {
-    const copy = {...info};
+    const copy: { [key: string]: string } = {...info};
     delete copy.level;
     delete copy.timestamp;
     delete copy.message;
@@ -16,13 +16,6 @@ const prettyJson = printf(info => {
 
 export const myLogger = winston.createLogger({
     level: 'debug',
-    format: combine(
-        splat(),
-        simple(),
-        timestamp(),
-        prettyJson
-    ),
-    transports: [
-        new winston.transports.Console({})
-    ]
+    format: combine(splat(), simple(), timestamp(), prettyJson),
+    transports: [new winston.transports.Console({})],
 });

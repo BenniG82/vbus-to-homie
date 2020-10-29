@@ -1,6 +1,6 @@
 // tslint:disable:max-classes-per-file
 declare module 'resol-vbus' {
-    import { Duplex } from 'stream';
+    import {Duplex} from 'stream';
 
     export class Specification {
         static getDefaultSpecification(): Specification;
@@ -29,6 +29,8 @@ declare module 'resol-vbus' {
     }
 
     export interface Packet {
+        getId(): string;
+
         destinationAddress: number;
         sourceAddress: number;
         timestamp: string;
