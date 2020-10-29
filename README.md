@@ -91,11 +91,14 @@ npx ts-node src/index.ts
 ![MQTT Structure](https://github.com/BenniG82/vbus-to-homie/raw/master/doc/homie-mqtt.png)
 
 ## Openhab example
-Please note that you need setup MQTT in openhab first. After you set MQTT up go to the openhab "Inbox" first and 
-add the device.
+Please note that you need setup MQTT in openhab first.
 
-Unfortunately the Homie-Plugin for openhab has an annoying bug, and will most likely tell you 
+There is a binding already available in the default installation: https://www.openhab.org/addons/bindings/mqtt/
+ 
+After you've set MQTT up go to the openhab "Inbox" first and add the device.
+
+Unfortunately the Plugin has an annoying bug, and will most likely tell you 
 "did not receive mandatory topic XXX" after you open the newly created thing.
 
-To overcome this, just restart this application. And wait for the thing to get "green" :)
+To overcome this, just restart this application and wait for the thing to get "green" :)
 ![Openhab](https://github.com/BenniG82/vbus-to-homie/raw/master/doc/openhab-homie.png)
