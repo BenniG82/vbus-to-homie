@@ -88,7 +88,7 @@ npx ts-node src/index.ts
 ```
 
 ## MQTT Homie structure
-![MQTT Structure](https://github.com/BenniG82/vbus-to-homie/raw/master/doc/homie-mqtt.png
+![MQTT Structure](https://github.com/BenniG82/vbus-to-homie/raw/master/doc/homie-mqtt.png)
 
 ## Openhab example
 Please note that you need setup MQTT in openhab first. After you set MQTT up go to the openhab "Inbox" first and 
