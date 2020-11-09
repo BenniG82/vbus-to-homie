@@ -1,6 +1,8 @@
 # Sample of how to provide resol vbus - data as Homie structure in a mqtt server
 This is an example of how to read data from your resol device and transform the data
-to the Homie format.
+to the [Homie](https://homieiot.github.io/specification/) format.
+
+This project uses the great library [resol-vbus](https://github.com/danielwippermann/resol-vbus) from Daniel Wippermann to read VBUS-information from the serialport.
 
 ## What you need to adjust
 in ```index.ts``` you need to provide information about your mqtt-server and serial port 
@@ -80,15 +82,17 @@ npx ts-node src/index.ts > output.txt
  
 
 ## Start
-Setup (only once)
+### Setup (only once)
 Install node from https://nodejs.org/de/download/ 
-(use a version with an even number, because these have long term support)
+
+Tip: Use a version with an even number, because these have long term support
 
 Open your preferred shell (cmd on Windows, bash, zsh) and run
 ```
 npm install
 ```
 
+### Start
 To start (and automatically transpile typescript to javascript)
 ```
 npx ts-node src/index.ts
